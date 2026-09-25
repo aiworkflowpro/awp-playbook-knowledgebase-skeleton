@@ -1,0 +1,28 @@
+# Your knowledge base lives in workspace/. The folder is tracked, its contents are not:
+# nothing you build while following this playbook gets committed back to the repo.
+workspace/*
+!workspace/.gitkeep
+
+# solutions/final/ is deliberately NOT ignored: it is the finished result of all
+# seven steps, so you can compare your work against it.
+
+# Credentials: never commit these
+.env
+.env.*
+credentials/
+*.key
+*.pem
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

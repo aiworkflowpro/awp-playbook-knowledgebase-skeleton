@@ -1,0 +1,15 @@
+# Link check settings for .github/workflows/links.yml
+max_retries = 3
+retry_wait_time = 5
+timeout = 30
+accept = ["200..=299", "429"]
+
+# YouTube and X answer automated requests with 429 or login walls,
+# so a failure there says nothing about the link itself.
+exclude = [
+  "^https://(www\\.)?youtube\\.com/",
+  "^https://youtu\\.be/",
+  "^https://(www\\.)?x\\.com/",
+  # Answers automated requests with 403 regardless of user agent.
+  "^https://pixflow\\.net/",
+]

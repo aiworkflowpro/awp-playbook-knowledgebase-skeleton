@@ -1,0 +1,17 @@
+# markdownlint-cli2 settings for .github/workflows/text.yml
+config:
+  default: true
+  MD013: false   # line length: prose and tables wrap naturally
+  MD033: false   # inline HTML: the centered hero, <picture> and <details> blocks need it
+  MD041: false   # first line heading: README opens with the hero banner
+  MD060: false   # table column style: compact tables are fine
+  MD036: false   # bold one-line labels above copyable prompt blocks are intentional
+
+# reference/ is a translated standard package and solutions/ is the recorded output
+# of an agent run; both are kept byte-for-byte as shipped, so they are not restyled.
+ignores:
+  - "reference/**"
+  - "solutions/**"
+  - "steps/*/import/**"   # deliberately raw sample files for the step 7 import
+  - "workspace/**"
+  - "node_modules/**"

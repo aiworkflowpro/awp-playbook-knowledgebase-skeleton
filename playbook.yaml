@@ -1,0 +1,50 @@
+# Machine-readable metadata for this companion repo.
+# The README "Video -> repo" table, the series course list and the profile
+# directory are generated from this file; edit here first.
+series: knowledgebase
+series_title: "Build a Knowledge Base for AI Agents"
+playlist: https://www.youtube.com/playlist?list=PLCWXPPyW6CWA
+episode: E02
+type: F
+title: "I Built a Knowledge Base from an Empty Folder. Here's How."
+video:
+  id: hmdKqGgIHyE
+  url: https://www.youtube.com/watch?v=hmdKqGgIHyE
+  published: 2026-08-25
+  duration: "51:11"
+  tag: video-002-knowledgebase-skeleton   # planned; created on publish day with v1.0.0
+release: v1.0.0                            # planned; tagged on publish day
+short_link: https://aiworkflowpro.com/r/e02
+homepage: https://aiworkflowpro.com
+tested_with:
+  - { agent: "Claude Code 2.1.280", model: "claude-opus-5-5", date: 2026-09-24, scope: "Quick Start prompt + step 0, fresh clone" }
+# The video numbers its chapters Step 0-6; the repo numbers steps 01-07
+# (00 is setup). Video "Step N" = repo step N+1.
+chapters:
+  - { t: "0:00",  title: "What does a knowledge base look like?", path: solutions/final/CLAUDE.md }
+  - { t: "5:12",  title: "Step 0 — The Skeleton",       path: steps/01-scaffold/prompt.md }
+  - { t: "10:33", title: "Step 1 — The Person",         path: steps/02-person/prompt.md }
+  - { t: "25:17", title: "Step 2 — The Business",       path: steps/03-business/prompt.md }
+  - { t: "28:29", title: "Step 3 — The Rules",          path: steps/04-standards/prompt.md }
+  - { t: "36:07", title: "Step 4 — The Workflows",      path: steps/05-workflows/prompt.md }
+  - { t: "46:14", title: "Step 5-6 — Knowledge & Engine", path: [steps/06-research/prompt.md, steps/07-engine/prompt.md] }
+prev:
+  episode: E01
+  title: "How a Knowledge Base Turned AI Agents into My Company OS"
+  video: https://www.youtube.com/watch?v=h5BCeUMGuf8
+  repo: null
+next:
+  episode: E03
+  repo: awp-playbook-knowledgebase-standards   # not public yet
+topics:
+  - ai-workflow-pro
+  - knowledge-base
+  - claude-code
+  - ai-agents
+  - claude-md
+  - agents-md
+  - second-brain
+  - personal-knowledge-management
+  - context-engineering
+  - markdown
+description: "Knowledge base for AI agents, built from an empty folder in 8 prompts. Plain Markdown your agent reads as memory — Claude Code, Codex, Cursor."
