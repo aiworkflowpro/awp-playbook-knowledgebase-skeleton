@@ -43,7 +43,7 @@ The knowledge base uses two delimiters, each with a clear responsibility:
 | Symbol | Name | Responsibility | Example |
 |--------|------|----------------|---------|
 | `-` | Hyphen | **Between segments**—between semantic segments at the same level | `report-book-review-overview-20260428` |
-| `_` | Underscore | **Between layers**—when identifiers from different levels are joined | `awp-workflow-website-article_143022_ai-programming-introduction` (example) |
+| `_` | Underscore | **Between layers**—when identifiers from different levels are joined | `awp-website-article-creating_143022_ai-programming-introduction` (example) |
 
 **Why two delimiters are needed**: when a filename must nest an identifier that itself contains hyphens, using hyphens between layers too makes the segment boundaries impossible to detect. The underscore separates identifiers from different levels, while the hyphen keeps its between-segments function inside each identifier.
 
@@ -51,7 +51,7 @@ The knowledge base uses two delimiters, each with a clear responsibility:
 
 ```
 {workflow_name}_{HHMMSS}_{topic_summary}
-awp-workflow-website-article_143022_ai-programming-introduction
+awp-website-article-creating_143022_ai-programming-introduction
 └── hyphens between segments ──┘ └─ underscore between layers ─┘
 ```
 
@@ -75,7 +75,7 @@ When one semantic segment consists of several words:
 | Multi-word | Join directly or use underscore | `mental-model-books`, `publication-verification` |
 | English | Underscore `_` or camelCase | `personal_auth`, `sharedApi` |
 
-> ⚠️ The underscore used to join words inside a segment and the underscore used between layers are the same symbol but different in meaning. How to tell them apart: the inside-a-segment underscore appears **inside one semantic segment** (e.g. `personal_auth` is one segment), the between-layers underscore appears **between two independent identifiers** (e.g. between `awp-workflow-website-article` and `143022`).
+> ⚠️ The underscore used to join words inside a segment and the underscore used between layers are the same symbol but different in meaning. How to tell them apart: the inside-a-segment underscore appears **inside one semantic segment** (e.g. `personal_auth` is one segment), the between-layers underscore appears **between two independent identifiers** (e.g. between `awp-website-article-creating` and `143022`).
 
 > Agent workflow directories do not use the inside-a-segment English joining rule from this section. They strictly use four segments, each segment one lowercase English word; details in the Agent Workflow Authoring Spec.
 
@@ -255,7 +255,7 @@ Four segments, three hyphens. This is the most structured pattern, for administr
 |-------------|---|---|---|---|---------|
 | Administrative documents | Type word | Object | Stage | `YYYYMMDD` | `report-mental-model-books-publication-verification-20260428.md` |
 | {owner_root} | Type | Dimension | Topic | Scope | `plan-expertise-industry-priority-general.md` |
-| Agent workflows | Namespace | Domain | Action | Subdivision | `awp-workflow-x-tweet` (example); each segment one English word |
+| Agent workflows | Namespace | Domain | Action | Subdivision | `awp-x-tweet-creating` (example); each segment one English word |
 | {brand_root} identity | Type | Dimension | Topic | Scope | `plan-positioning-industry-agent-workflow-general.md` |
 | {brand_root} persona | Type | Dimension | Topic | Scope | `data-persona-L1identity-{persona_key}.md` |
 | {tools_root}credentials/ | Category | Service | Scope | Purpose | `cloud-cloudflare-shared-api.md` |
@@ -264,7 +264,7 @@ Four segments, three hyphens. This is the most structured pattern, for administr
 | {inbox_root}archive/ | `YYYYMMDD` | Type | Object | Disposition | `20260430-book-excerpt-midas-touch-secrets-sealed` |
 | {research_root}topic/{topic}/material/{YYYYMM}/ | `YYYYMMDD` | Type abbreviation | Language | Title | `20260607-bk-en-data_feminism` |
 | {research_root}subject/{subject}/material/{YYYYMM}/ | `YYYYMMDD` | Material type | Language | Title | `20260807-an-zh-spoken-video-editing-automation-boundary.md` |
-| {workflows_root} directory names | Namespace | Domain | Action | Subdivision | `awp-workflow-website-article/` (example) |
+| {workflows_root} directory names | Namespace | Domain | Action | Subdivision | `awp-website-article-creating/` (example) |
 | {specs_root} standard packages | Namespace | Domain | Target | `standard` | `awp-knowledge-management-standard/` (example) |
 | CLI entry names (commands) | Namespace | Major category | Name | Form | `{prefix}-fetch`, `{prefix}-sync cloud` (examples) |
 | {tools_root}best-practice/ directory names | Domain | Tool | Level | Status | `infra-ssh-base-live/` |
@@ -380,7 +380,7 @@ today  -  latest-version  -  final  -  new  -  final  -  v2  -  latest  -  lates
 
 | Implementer | Pattern | Slot summary | Example | Field definitions in |
 |-------------|---------|--------------|---------|----------------------|
-| {workflows_root} | §5 three hyphens | A-B-C-D | `awp-workflow-website-article/` (example) | Agent Workflow Authoring Spec |
+| {workflows_root} | §5 three hyphens | A-B-C-D | `awp-website-article-creating/` (example) | Agent Workflow Authoring Spec |
 | {specs_root} | §5 three hyphens, strictly four physical segments | `{namespace}`-domain-target-`standard` | `awp-knowledge-management-standard/` (example) | `{specs_root}naming-map.yaml`  -  Standard Authoring standard |
 | Course material units | §3-§5 (1-3 segments) | date-1 to 3 segments from coarse to fine | `20260316-seo-basics-tutorial03-keyword-find-real-user-queries/` | `../methodology/business/` |
 | Course material chapters | Dedicated system | series name + number + title + `content_id` | `ClaudeCode01what-is-claude-code20260317132543-claudecode-intro-concept/` | `../methodology/business/` |
@@ -390,7 +390,7 @@ today  -  latest-version  -  final  -  new  -  final  -  v2  -  latest  -  lates
 | {brand_root} design version directory | §3 one hyphen | A-B | `202606-workbench/` | `../methodology/brand/` |
 | {research_root}topic/{topic}/materials/ monthly partitions | §2 zero hyphens | `YYYYMM` | `202606/` | `../methodology/research/` |
 | {research_root}subject/{subject}/materials/ monthly partitions | §2 zero hyphens | `YYYYMM` | `202608/` | `../methodology/research/` |
-| {run_output_root} | Nested (between-layers `_`) | workflow_name_`HHMMSS`_topic | `awp-workflow-website-article_143022_ai-programming-introduction/` | `../methodology/operations/` |
+| {run_output_root} | Nested (between-layers `_`) | workflow_name_`HHMMSS`_topic | `awp-website-article-creating_143022_ai-programming-introduction/` | `../methodology/operations/` |
 | {dashboard_root}research/ | §5 three hyphens | A-B-C-D | `20260605-plan-visual-analysis-cli-continuation/` | `../methodology/operations/` |
 | {commerce_root}judgment/decision/ | §5 three hyphens | A-B-C-D | `20260625-agent-cost-control-layer-Go/` | `../methodology/commerce/` |
 | Object storage paths | Dedicated system | three layers | `x/20260607/agent-hype-a3f7-cover.webp` | `../methodology/tools/` |
