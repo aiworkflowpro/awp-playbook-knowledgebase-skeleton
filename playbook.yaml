@@ -1,6 +1,7 @@
 # Machine-readable metadata for this companion repo.
 # The README "Video -> repo" table, the series course list and the profile
 # directory are generated from this file; edit here first.
+version: "1.0.0"
 series: knowledgebase
 series_title: "Build a Knowledge Base for AI Agents"
 playlist: https://www.youtube.com/playlist?list=PLCWXPPyW6CWA
