@@ -1,12 +1,12 @@
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=hmdKqGgIHyE">
+  <a href="https://www.youtube.com/watch?v=OAvNR8XN1oU">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.png">
       <source media="(prefers-color-scheme: light)" srcset=".github/assets/banner-light.png">
-      <img alt="I Built a Knowledge Base from an Empty Folder. Here's How. — AI Workflow Pro, episode E02" src=".github/assets/banner-dark.png" width="100%">
+      <img alt="The Simplest AI Second Brain: 8 Folders + Claude Code — AI Workflow Pro, episode E02" src=".github/assets/banner-dark.png" width="100%">
     </picture>
   </a>
-  <p><sub>▶ Watch the video (51 min)</sub></p>
+  <p><sub>▶ Watch the video (26 min)</sub></p>
 </div>
 
 # Build a Knowledge Base for AI Agents from an Empty Folder
@@ -14,14 +14,14 @@
 **Knowledge base for AI agents, built from an empty folder in 8 prompts. Plain Markdown your agent reads as memory — Claude Code, Codex, Cursor.**
 
 [![AI Workflow Pro · E02](https://img.shields.io/badge/AI_Workflow_Pro-E02-1F2937?style=flat-square&labelColor=0B0F14&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NiA4MCI+PGcgZmlsbD0iIzEwQjk4MSI+PHBhdGggZD0iTTAsMTYgTDI0LDQwIEwwLDY0IEwxNCw2NCBMMzgsNDAgTDE0LDE2IFoiLz48cGF0aCBkPSJNMjQsMTYgTDQ4LDQwIEwyNCw2NCBMMzgsNjQgTDYyLDQwIEwzOCwxNiBaIiBvcGFjaXR5PSIwLjU1Ii8+PHBhdGggZD0iTTQ4LDE2IEw3Miw0MCBMNDgsNjQgTDYyLDY0IEw4Niw0MCBMNjIsMTYgWiIgb3BhY2l0eT0iMC4yNSIvPjwvZz48L3N2Zz4=)](https://aiworkflowpro.com)
-[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-1F2937?style=flat-square&labelColor=0B0F14&logo=youtube&logoColor=FF0000)](https://www.youtube.com/watch?v=hmdKqGgIHyE)
+[![Watch on YouTube](https://img.shields.io/badge/Watch-YouTube-1F2937?style=flat-square&labelColor=0B0F14&logo=youtube&logoColor=FF0000)](https://www.youtube.com/watch?v=OAvNR8XN1oU)
 [![Tested with Claude Code](https://img.shields.io/badge/Tested_with-Claude_Code_2.1.280-1F2937?style=flat-square&labelColor=0B0F14&logo=claude&logoColor=D97757)](#tested-with)
 [![Release](https://img.shields.io/github/v/release/aiworkflowpro/awp-playbook-knowledgebase-skeleton?style=flat-square&labelColor=0B0F14&color=1F2937)](https://github.com/aiworkflowpro/awp-playbook-knowledgebase-skeleton/releases)
 [![License](https://img.shields.io/badge/License-CC_BY_4.0_%2B_MIT-1F2937?style=flat-square&labelColor=0B0F14)](#license)
 
-Part 2 of [Build a Knowledge Base for AI Agents](https://www.youtube.com/playlist?list=PLCWXPPyW6CWA) · [← Episode 1](https://www.youtube.com/watch?v=h5BCeUMGuf8) · Episode 3 — coming soon · [Full guide](https://aiworkflowpro.com)
+Part 2 of [Build a Knowledge Base for AI Agents](https://www.youtube.com/playlist?list=PLCWXPPyW6CWA) · [← Episode 1](https://www.youtube.com/watch?v=WK-ppzQ_AKw) · [Episode 3 →](https://www.youtube.com/watch?v=bpBhRBcKZOc) ([awp-playbook-knowledgebase-standards](https://github.com/aiworkflowpro/awp-playbook-knowledgebase-standards)) · [Full guide](https://aiworkflowpro.com)
 
-This repo accompanies the video ["I Built a Knowledge Base from an Empty Folder. Here's How."](https://www.youtube.com/watch?v=hmdKqGgIHyE)
+This repo accompanies the video ["The Simplest AI Second Brain: 8 Folders + Claude Code"](https://www.youtube.com/watch?v=OAvNR8XN1oU)
 
 ---
 
@@ -100,18 +100,21 @@ rules from your own knowledge base instead of from this repo.
 
 ## Video → repo
 
-The video numbers its chapters from Step 0; the repo numbers steps from 01 and keeps 00 for setup.
-Video "Step N" is repo step N+1.
+The video's Step N is the repo's step N; `steps/00-setup` is the setup before Step 1.
 
 | Time | Video chapter | Repo |
 |------|---------------|------|
-| [0:00](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=0s) | What does a knowledge base look like? | [solutions/final/CLAUDE.md](solutions/final/CLAUDE.md) |
-| [5:12](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=312s) | Step 0 — The Skeleton | [steps/01-scaffold/prompt.md](steps/01-scaffold/prompt.md) |
-| [10:33](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=633s) | Step 1 — The Person | [steps/02-person/prompt.md](steps/02-person/prompt.md) |
-| [25:17](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=1517s) | Step 2 — The Business | [steps/03-business/prompt.md](steps/03-business/prompt.md) |
-| [28:29](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=1709s) | Step 3 — The Rules | [steps/04-standards/prompt.md](steps/04-standards/prompt.md) |
-| [36:07](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=2167s) | Step 4 — The Workflows | [steps/05-workflows/prompt.md](steps/05-workflows/prompt.md) |
-| [46:14](https://www.youtube.com/watch?v=hmdKqGgIHyE&t=2774s) | Step 5-6 — Knowledge & Engine | [steps/06-research/prompt.md](steps/06-research/prompt.md), [steps/07-engine/prompt.md](steps/07-engine/prompt.md) |
+| [0:00](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=0s) | The bookshelf: 8 folders of a knowledge base | [solutions/final/CLAUDE.md](solutions/final/CLAUDE.md) |
+| [3:40](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=220s) | Why not PARA or a Second Brain? | — |
+| [4:44](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=284s) | Two ways to organize: by time or by dimension | — |
+| [5:37](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=337s) | Step 1: the skeleton from one prompt | [steps/01-scaffold/prompt.md](steps/01-scaffold/prompt.md) |
+| [9:16](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=556s) | Step 2: owner/ and brand/ | [steps/02-person/prompt.md](steps/02-person/prompt.md) |
+| [13:13](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=793s) | Step 3: business/ | [steps/03-business/prompt.md](steps/03-business/prompt.md) |
+| [14:36](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=876s) | Step 4: specs/, naming and script standards | [steps/04-standards/prompt.md](steps/04-standards/prompt.md) |
+| [18:19](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=1099s) | Step 5: workflows/, a script workflow | [steps/05-workflows/prompt.md](steps/05-workflows/prompt.md) |
+| [21:55](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=1315s) | Step 6: research/, keep learning | [steps/06-research/prompt.md](steps/06-research/prompt.md) |
+| [23:25](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=1405s) | Step 7: inbox/, import your old files | [steps/07-engine/prompt.md](steps/07-engine/prompt.md) |
+| [25:42](https://www.youtube.com/watch?v=OAvNR8XN1oU&t=1542s) | Recap: one source of truth | [solutions/final/CLAUDE.md](solutions/final/CLAUDE.md) |
 
 ## FAQ
 
