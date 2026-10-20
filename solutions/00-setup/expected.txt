@@ -1,0 +1,9 @@
+$ pwd
+/path/to/your/projects/awp-playbook-knowledgebase-skeleton
+
+$ ls
+AGENTS.md  CHANGELOG.md  CLAUDE.md  GEMINI.md  LICENSE  LICENSE-CODE  README.md
+playbook.yaml  reference  solutions  steps  workspace
+
+$ ls -A workspace/
+.gitkeep

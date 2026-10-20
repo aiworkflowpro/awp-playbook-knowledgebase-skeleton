@@ -1,0 +1,18 @@
+workspace/
+├── CLAUDE.md
+├── owner/
+│   └── CLAUDE.md
+├── brand/
+│   └── CLAUDE.md
+├── business/
+│   └── CLAUDE.md
+├── specs/
+│   └── CLAUDE.md
+├── workflows/
+│   └── CLAUDE.md
+├── research/
+│   └── CLAUDE.md
+├── dashboard/
+│   └── CLAUDE.md
+└── inbox/
+    └── CLAUDE.md

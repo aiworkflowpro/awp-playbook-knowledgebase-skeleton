@@ -1,0 +1,24 @@
+workspace/research/
+├── CLAUDE.md
+└── topics/
+    ├── ai-video-editing/
+    │   ├── CLAUDE.md
+    │   └── materials/
+    │       └── 202608/
+    │           ├── 20260824-article-en-ai-first-draft/
+    │           │   ├── 20260824-raw-en-ai-first-draft.md
+    │           │   └── 20260824-std-en-ai-first-draft.md
+    │           ├── 20260824-article-en-ai-tools-2026/
+    │           │   ├── 20260824-raw-en-ai-tools-2026.md
+    │           │   └── 20260824-std-en-ai-tools-2026.md
+    │           ├── 20260824-article-en-editing-techniques/
+    │           │   ├── 20260824-raw-en-editing-techniques.md
+    │           │   └── 20260824-std-en-editing-techniques.md
+    │           └── 20260824-video-en-ai-editing-workflow/
+    │               ├── 20260824-raw-en-ai-editing-workflow.md
+    │               └── 20260824-std-en-ai-editing-workflow.md
+    └── competitor-channels/
+        ├── CLAUDE.md
+        └── materials/
+            └── 202608/
+                └── 20260824-note-en-competitor-channels.md

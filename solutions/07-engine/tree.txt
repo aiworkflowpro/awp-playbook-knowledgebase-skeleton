@@ -1,0 +1,33 @@
+workspace/
+├── brand/
+│   ├── audience.md
+│   ├── CLAUDE.md
+│   └── identity.md
+├── business/
+│   ├── CLAUDE.md
+│   ├── x/
+│   └── youtube/
+├── CLAUDE.md
+├── dashboard/
+│   ├── CLAUDE.md
+│   └── output/
+├── inbox/
+│   ├── 20260824-video-script-youtube.md
+│   ├── archive/
+│   └── CLAUDE.md
+├── owner/
+│   ├── CLAUDE.md
+│   ├── decisions.md
+│   └── profile.md
+├── research/
+│   ├── CLAUDE.md
+│   └── topics/
+├── specs/
+│   ├── awp-knowledge-management-standard/
+│   ├── CLAUDE.md
+│   ├── format.md
+│   ├── naming-convention.md
+│   └── youtube-script-standard.md
+└── workflows/
+    ├── awp-video-script-workflow.md
+    └── CLAUDE.md

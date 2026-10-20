@@ -1,0 +1,38 @@
+# English-only repository: no CJK characters anywhere in history.
+# Checks file contents, file paths and commit messages of every commit on every ref.
+name: Language
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  english-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: No CJK characters in files, paths or commit messages (full history)
+        shell: bash
+        run: |
+          set -euo pipefail
+          pat='[\x{3000}-\x{303f}\x{4e00}-\x{9fff}\x{ff00}-\x{ffef}]'
+          git fetch --no-tags --quiet origin '+refs/heads/*:refs/remotes/origin/*' || true
+          bad=0
+          for c in $(git rev-list --all); do
+            hits=$(git grep -IlP "$pat" "$c" -- . 2>/dev/null || true)
+            if [ -n "$hits" ]; then echo "::error::CJK in file contents at $c:"; echo "$hits"; bad=1; fi
+            paths=$(git -c core.quotepath=off ls-tree -r --name-only "$c" | perl -CSD -ne 'print if /[\x{3000}-\x{303f}\x{4e00}-\x{9fff}\x{ff00}-\x{ffef}]/')
+            if [ -n "$paths" ]; then echo "::error::CJK in file paths at $c:"; echo "$paths"; bad=1; fi
+            msg=$(git log -1 --format=%B "$c")
+            if printf '%s\n' "$msg" | perl -CSD -ne 'BEGIN{$f=0} $f=1 if /[\x{3000}-\x{303f}\x{4e00}-\x{9fff}\x{ff00}-\x{ffef}]/; END{exit($f?0:1)}'; then echo "::error::CJK in the commit message of $c"; bad=1; fi
+          done
+          if [ "$bad" -ne 0 ]; then
+            echo "This is an English-only repository. Remove the characters above; if they are in history, rewrite it before the repository goes public."
+            exit 1
+          fi
+          echo "No CJK characters in $(git rev-list --all | wc -l) commits."
